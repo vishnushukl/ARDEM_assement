@@ -22,9 +22,10 @@ Create a virtual environment and install the dependencies listed in **requiremen
 #### Prepare the input directory:
 1. Place your PDF files in the **input/** directory.
 
-2. Run the script:
+**2. Run the script:**
 Execute the main script to process the PDF files.
 - python main.py
 
-3. Check the output:
+**3. Check the output:**
 The extracted data will be saved as CSV files in the **output/** directory.
+- ![image](https://github.com/user-attachments/assets/ce559aa0-d343-406e-a471-706b96dbdab7)
