@@ -17,7 +17,7 @@ def extractedTxt(file):
     }
     
     extracted_data = {key: "No data found" for key in keywords}
-    date_pattern = r'\d{4}-\d{2}-\d{2}'  # Assuming date format is YYYY-MM-DD
+    date_pattern = r'\d{4}-\d{2}-\d{2}'
     
     try:
         if file.endswith(".pdf"):
@@ -26,7 +26,6 @@ def extractedTxt(file):
                 custom_config = r'--oem 3 --psm 6'  # OCR Engine Mode 3 and Page Segmentation Mode 6
                 text = pytesseract.image_to_string(img, config=custom_config).lower().splitlines()
                 
-                # Join all text lines to search for the date
                 joined_text = ' '.join(text)
                 date_match = re.search(date_pattern, joined_text)
                 extracted_date = date_match.group() if date_match else "No data found"
